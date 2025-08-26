@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# VS Code
+.vscode/
+
+# Test and coverage reports
+htmlcov/
+*.cover
+*.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.log
+*.out
+*.tmp
+*.dat
+*.sqlite
+*.db
+
+# pytest-html report
+report.html
+
+# Environment
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS
+.DS_Store
+
+# Misc
+*.swp
+*.swo
+.idea/
+*.bak
