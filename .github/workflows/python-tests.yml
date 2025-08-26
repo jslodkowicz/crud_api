@@ -17,6 +17,7 @@ jobs:
           - 8000:80
         env:
           MODULE_NAME: src.main
+          PYTHONPATH: /app
         options: >-
           --health-cmd "curl --fail http://localhost:80/users || exit 1"
           --health-interval 5s
