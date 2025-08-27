@@ -24,7 +24,7 @@ jobs:
 
       - name: Start API server
         run: |
-          nohup uvicorn main:app --host 127.0.0.1 --port 8000 &
+          nohup uvicorn src.main:app --host 127.0.0.1 --port 8000
           sleep 10
 
       - name: Show nohup log (debug)
