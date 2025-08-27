@@ -18,10 +18,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Ensure users.json file exists
+        run: |
+          if [ ! -f users.json ]; then echo "[]" > users.json; fi
+
       - name: Start API server
         run: |
           nohup uvicorn main:app --reload --port 8000 &
-          sleep 5
+          sleep 10
+
+      - name: Show running processes (debug)
+        run: ps aux
+
+      - name: Show nohup log (debug)
+        run: tail -20 nohup.out || true
 
       - name: Run tests and generate HTML report
         run: pytest --html=report.html --self-contained-html
